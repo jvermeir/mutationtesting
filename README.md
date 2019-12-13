@@ -4,17 +4,15 @@
 
 ## Frameworks
 
-```
-[Stryker](https://stryker-mutator.io/) : for Javascript
-[Pitest](https://pitest.org/) 
-[Jumble](https://sourceforge.net/projects/jumble/files/jumble/1.3.0/)
-```
+- [Stryker](https://stryker-mutator.io/) - works for Javascript
+- [Pitest](https://pitest.org/) 
+- [Jumble](https://sourceforge.net/projects/jumble/files/jumble/1.3.0/) - Last updated in 2015 
 
 Stryker doesn't work for Java. Jumble was mentioned on the Wikipedia page, but seems inactive, just like most other frameworks mentioned on the page. 
 
 PITest works fine though. 
 
-The class under test is `MyController`. It defines a couple of trivial methods, some of which are somewhat tested.
+The class under test is `MyClass`. It defines a single method `myTestMethod`.
 
 This method 
 
