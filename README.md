@@ -69,34 +69,44 @@ PITest and see how long it takes.
 template named `ClassUnderTestTemplate.java`. The code is generated in a temporary folder created by JUnit's tempfolder feature. 
 Then the project is build using maven with the `pom.xml` provided. 
 
-1000 classes: 
+The class under test waits a random number of ms (between 0 and 100) to simulate real life processing. Running the tests without piTest takes about 2 minutes. 
 
 ```
+[INFO] Results:
+[INFO]
 [INFO] Tests run: 1000, Failures: 0, Errors: 0, Skipped: 0
 [INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 02:00 min
-[INFO] Finished at: 2019-12-23T19:01:46+01:00
-[INFO] Final Memory: 17M/67M
-[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 10.479 s
+[INFO] Finished at: 2020-02-01T21:59:22+01:00
+[INFO] Final Memory: 14M/57M
+[INFO] ------------------------------------------------------------------------```
 ```
 
-timing: 
+With mutations added the tests take 60 times longer (10 seconds vs 11 minutes).
+
 ```
+================================================================================
 - Timings
 ================================================================================
 > scan classpath : < 1 second
-> coverage and dependency analysis : 1 minutes and 49 seconds
+> coverage and dependency analysis : 3 seconds
 > build mutation tests : 1 seconds
-> run mutation analysis : 18 minutes and 39 seconds
+> run mutation analysis : 11 minutes and 3 seconds
 --------------------------------------------------------------------------------
-> Total  : 20 minutes and 30 seconds
+> Total  : 11 minutes and 8 seconds
 --------------------------------------------------------------------------------
 ================================================================================
 - Statistics
 ================================================================================
->> Generated 10000 mutations Killed 4000 (40%)
->> Ran 8000 tests (0.8 tests per mutation)
-```
+>> Generated 9000 mutations Killed 4000 (44%)
+>> Ran 5000 tests (0.56 tests per mutation)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 11:20 min
+[INFO] Finished at: 2020-02-01T22:10:58+01:00
+[INFO] Final Memory: 18M/70M
+[INFO] ------------------------------------------------------------------------```
