@@ -69,7 +69,7 @@ PITest and see how long it takes.
 template named `ClassUnderTestTemplate.java`. The code is generated in a temporary folder created by JUnit's tempfolder feature. 
 Then the project is build using maven with the `pom.xml` provided. 
 
-The class under test waits a random number of ms (between 0 and 100) to simulate real life processing. Running the tests without piTest takes about 2 minutes. 
+Running the tests without piTest takes about 10 seconds.
 
 ```
 [INFO] Results:
