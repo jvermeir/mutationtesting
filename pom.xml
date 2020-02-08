@@ -33,6 +33,10 @@
                         <version>0.10</version>
                     </dependency>
                 </dependencies>
+                <configuration>
+                    <excludedTestClasses>to.be.excluded.*</excludedTestClasses>
+                    <excludedClasses>to.be.excluded.*</excludedClasses>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
