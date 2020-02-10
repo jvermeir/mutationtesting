@@ -36,7 +36,7 @@ The test code in MyControllerTest shows what looks like a perfectly fine test:
 ```
 
 Both branches of the if in `myTestMethod` are tested, but what happens if we would change the condition of the if?
-The test cases are not sufficient because we can change `if (i > 10)` to `if (i > 11)` and all would be green. 
+The test cases are not sufficient because we can change `if (i > 10)` to `if (i > 11)` and all would still be green. 
 
 PITest catches this problem in our test case:
 
@@ -82,5 +82,6 @@ To add PiTest to your project you need to add the following in your pom.xml file
 and run the tests:
 ```
     mvn clean test org.pitest:pitest-maven:mutationCoverage
-```    
+```
+
 The results are in `target/pit-reports`.
